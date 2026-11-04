@@ -1,0 +1,66 @@
+[
+  {
+    "id": "resources-01",
+    "title": "HTML Reference Practice",
+    "creator": "River Club",
+    "category": "Web",
+    "minutes": 20,
+    "description": "Fictional practice resource for the web collection."
+  },
+  {
+    "id": "resources-02",
+    "title": "CSS Grid Notes",
+    "creator": "Maple Club",
+    "category": "Web",
+    "minutes": 30,
+    "description": "Fictional practice resource for the web collection."
+  },
+  {
+    "id": "resources-03",
+    "title": "Sketching Basics",
+    "creator": "Willow Club",
+    "category": "Art",
+    "minutes": 45,
+    "description": "Fictional practice resource for the art collection."
+  },
+  {
+    "id": "resources-04",
+    "title": "Board Game Design",
+    "creator": "River Club",
+    "category": "Games",
+    "minutes": 60,
+    "description": "Fictional practice resource for the games collection."
+  },
+  {
+    "id": "resources-05",
+    "title": "Reading Journal Guide",
+    "creator": "Maple Club",
+    "category": "Books",
+    "minutes": 20,
+    "description": "Fictional practice resource for the books collection."
+  },
+  {
+    "id": "resources-06",
+    "title": "Photo Composition Practice",
+    "creator": "Willow Club",
+    "category": "Art",
+    "minutes": 30,
+    "description": "Fictional practice resource for the art collection."
+  },
+  {
+    "id": "resources-07",
+    "title": "Accessible Forms Notes",
+    "creator": "River Club",
+    "category": "Web",
+    "minutes": 40,
+    "description": "Fictional practice resource for the web collection."
+  },
+  {
+    "id": "resources-08",
+    "title": "Story Planning Cards",
+    "creator": "Maple Club",
+    "category": "Books",
+    "minutes": 45,
+    "description": "Fictional practice resource for the books collection."
+  }
+]

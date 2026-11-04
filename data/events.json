@@ -1,0 +1,66 @@
+[
+  {
+    "id": "events-01",
+    "title": "HTML Study Circle",
+    "creator": "River Club",
+    "category": "Study",
+    "minutes": 60,
+    "description": "Fictional practice event for the study collection."
+  },
+  {
+    "id": "events-02",
+    "title": "CSS Layout Clinic",
+    "creator": "Maple Club",
+    "category": "Study",
+    "minutes": 90,
+    "description": "Fictional practice event for the study collection."
+  },
+  {
+    "id": "events-03",
+    "title": "Board Game Afternoon",
+    "creator": "River Club",
+    "category": "Social",
+    "minutes": 120,
+    "description": "Fictional practice event for the social collection."
+  },
+  {
+    "id": "events-04",
+    "title": "Sketch Walk",
+    "creator": "Willow Club",
+    "category": "Creative",
+    "minutes": 60,
+    "description": "Fictional practice event for the creative collection."
+  },
+  {
+    "id": "events-05",
+    "title": "Reading Meetup",
+    "creator": "Maple Club",
+    "category": "Social",
+    "minutes": 90,
+    "description": "Fictional practice event for the social collection."
+  },
+  {
+    "id": "events-06",
+    "title": "Repair Demonstration",
+    "creator": "Willow Club",
+    "category": "Creative",
+    "minutes": 45,
+    "description": "Fictional practice event for the creative collection."
+  },
+  {
+    "id": "events-07",
+    "title": "JavaScript Practice",
+    "creator": "River Club",
+    "category": "Study",
+    "minutes": 75,
+    "description": "Fictional practice event for the study collection."
+  },
+  {
+    "id": "events-08",
+    "title": "Community Story Hour",
+    "creator": "Maple Club",
+    "category": "Creative",
+    "minutes": 45,
+    "description": "Fictional practice event for the creative collection."
+  }
+]

@@ -1,0 +1,66 @@
+[
+  {
+    "id": "books-01",
+    "title": "Robot Garden",
+    "creator": "Mina Reed",
+    "category": "Science fiction",
+    "minutes": 240,
+    "description": "Fictional practice book for the science fiction collection."
+  },
+  {
+    "id": "books-02",
+    "title": "River Sketches",
+    "creator": "Leo Park",
+    "category": "Art",
+    "minutes": 180,
+    "description": "Fictional practice book for the art collection."
+  },
+  {
+    "id": "books-03",
+    "title": "Quiet Satellites",
+    "creator": "Ira Chen",
+    "category": "Science fiction",
+    "minutes": 240,
+    "description": "Fictional practice book for the science fiction collection."
+  },
+  {
+    "id": "books-04",
+    "title": "Small City Stories",
+    "creator": "Nora Vale",
+    "category": "Fiction",
+    "minutes": 150,
+    "description": "Fictional practice book for the fiction collection."
+  },
+  {
+    "id": "books-05",
+    "title": "Trail Notes",
+    "creator": "Ari Stone",
+    "category": "Nature",
+    "minutes": 120,
+    "description": "Fictional practice book for the nature collection."
+  },
+  {
+    "id": "books-06",
+    "title": "Paper Worlds",
+    "creator": "Sam Finch",
+    "category": "Art",
+    "minutes": 180,
+    "description": "Fictional practice book for the art collection."
+  },
+  {
+    "id": "books-07",
+    "title": "Night Orchard",
+    "creator": "Jules Brook",
+    "category": "Fiction",
+    "minutes": 210,
+    "description": "Fictional practice book for the fiction collection."
+  },
+  {
+    "id": "books-08",
+    "title": "Cloud Atlas Practice",
+    "creator": "Ren Lake",
+    "category": "Nature",
+    "minutes": 90,
+    "description": "Fictional practice book for the nature collection."
+  }
+]

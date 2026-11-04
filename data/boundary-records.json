@@ -1,0 +1,22 @@
+[
+  {
+    "id": "missing-title",
+    "creator": "Mina Reed",
+    "category": "Practice",
+    "minutes": 30
+  },
+  {
+    "id": "wrong-type",
+    "title": "Mixed Type",
+    "creator": "Leo Park",
+    "category": "Practice",
+    "minutes": "thirty"
+  },
+  {
+    "id": "trim-case",
+    "title": "  ROBOT GARDEN  ",
+    "creator": "  Mina Reed  ",
+    "category": "science fiction",
+    "minutes": 240
+  }
+]

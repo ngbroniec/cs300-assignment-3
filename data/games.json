@@ -1,0 +1,66 @@
+[
+  {
+    "id": "games-01",
+    "title": "Garden Tiles",
+    "creator": "Mina Workshop",
+    "category": "Puzzle",
+    "minutes": 30,
+    "description": "Fictional practice game for the puzzle collection."
+  },
+  {
+    "id": "games-02",
+    "title": "River Routes",
+    "creator": "Leo Workshop",
+    "category": "Strategy",
+    "minutes": 60,
+    "description": "Fictional practice game for the strategy collection."
+  },
+  {
+    "id": "games-03",
+    "title": "Quiet Quest",
+    "creator": "Ira Workshop",
+    "category": "Cooperative",
+    "minutes": 45,
+    "description": "Fictional practice game for the cooperative collection."
+  },
+  {
+    "id": "games-04",
+    "title": "City Builder Practice",
+    "creator": "Nora Workshop",
+    "category": "Strategy",
+    "minutes": 60,
+    "description": "Fictional practice game for the strategy collection."
+  },
+  {
+    "id": "games-05",
+    "title": "Trail Match",
+    "creator": "Ari Workshop",
+    "category": "Puzzle",
+    "minutes": 20,
+    "description": "Fictional practice game for the puzzle collection."
+  },
+  {
+    "id": "games-06",
+    "title": "Paper Journey",
+    "creator": "Sam Workshop",
+    "category": "Cooperative",
+    "minutes": 45,
+    "description": "Fictional practice game for the cooperative collection."
+  },
+  {
+    "id": "games-07",
+    "title": "Night Market Practice",
+    "creator": "Jules Workshop",
+    "category": "Strategy",
+    "minutes": 30,
+    "description": "Fictional practice game for the strategy collection."
+  },
+  {
+    "id": "games-08",
+    "title": "Cloud Cards",
+    "creator": "Ren Workshop",
+    "category": "Puzzle",
+    "minutes": 15,
+    "description": "Fictional practice game for the puzzle collection."
+  }
+]
