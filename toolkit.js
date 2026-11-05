@@ -74,3 +74,51 @@ export function sortRecords(records, property) {
  
   return copy;
 }
+
+//Summarize
+export function summarizeRecords(records) {
+  let total = 0;
+  let usable = 0;
+  let min = null;
+  let max = null;
+
+  for (const record of records) {
+    if (typeof record.minutes === "number" && !isNaN(record.minutes)) {
+      total = total + record.minutes;
+      usable = usable + 1;
+      if (min === null || record.minutes < min) {
+        min = record.minutes;
+      }
+      if (max === null || record.minutes > max) {
+        max = record.minutes;
+      }
+    }
+  }
+
+  let average = null;
+  if (usable > 0) {
+    average = total / usable;
+  }
+
+  return {
+    count: records.length,
+    totalMinutes: total,
+    averageMinutes: average,
+    minMinutes: min,
+    maxMinutes: max,
+  };
+}
+
+//Report
+export function buildReport(records, query) {
+  const matches = searchRecords(records, query);
+  const sorted = sortRecords(matches, "minutes");
+  const summary = summarizeRecords(sorted);
+
+  return {
+    query: query,
+    matchCount: sorted.length,
+    titles: sorted.map((record) => record.title),
+    summary: summary,
+  };
+}

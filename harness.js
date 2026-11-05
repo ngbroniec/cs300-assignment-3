@@ -29,6 +29,9 @@ function check(name, expected, actual) {
   );
 }
 
+const titles = (list) => list.map((record) => record.title);
+const ids = (list) => list.map((record) => record.id);
+
 //Validate
 check("validate accepts a good record",
   { valid: true, errors: [] },
@@ -80,3 +83,5 @@ check("sort by minutes, shortest first",
   ["Cloud Atlas Practice", "Trail Notes", "Small City Stories", "Paper Worlds",
    "River Sketches", "Night Orchard", "Quiet Satellites", "Robot Garden"],
   titles(sortRecords(books, "minutes")));
+
+  
