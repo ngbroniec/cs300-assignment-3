@@ -33,6 +33,8 @@ const titles = (list) => list.map((record) => record.title);
 const ids = (list) => list.map((record) => record.id);
 
 //Validate
+// Takes: one record
+// Returns: { valid: true or false, errors: [list of strings] }
 check("validate accepts a good record",
   { valid: true, errors: [] },
   validateRecord(books[0]));
@@ -46,6 +48,8 @@ check('validate reports minutes "thirty" (EDGE: wrong type)',
   validateRecord(boundary[1]));
 
 //Normalize
+// Takes: one record
+// Returns: a NEW record with trimmed text and the category
 check("normalize trims spaces and fixes the category",
   { id: "trim-case", title: "ROBOT GARDEN", creator: "Mina Reed", category: "Science fiction", minutes: 240 },
   normalizeRecord(boundary[2]));
@@ -57,6 +61,8 @@ check("normalize does not change the original record (NONMUTATION)",
   JSON.stringify(boundary[2]));
 
 //Filter
+// Takes: an array of records
+// Returns: a NEW array of the matches
 check("filter keeps only the Art books",
   ["River Sketches", "Paper Worlds"],
   titles(filterRecords(books, (book) => book.category === "Art")));
@@ -66,6 +72,8 @@ check("filter on an empty array gives an empty array (EDGE: empty array)",
   filterRecords(empty, (book) => book.category === "Art"));
  
 //Search
+// Takes: an array of records and a search word
+// Returns: a NEW array of records with the specific word
 check('search ignores capital letters: "robot", "Robot", "ROBOT" (EDGE: capitalization)',
   [["Robot Garden"], ["Robot Garden"], ["Robot Garden"]],
   [
@@ -79,12 +87,28 @@ check('search looks at the creator: "mina" finds Robot Garden',
   titles(searchRecords(books, "mina")));
  
 //Sort
+// Takes: an array of records and a property name
+// Returns: a NEW array, smallest first
 check("sort by minutes, shortest first",
   ["Cloud Atlas Practice", "Trail Notes", "Small City Stories", "Paper Worlds",
    "River Sketches", "Night Orchard", "Quiet Satellites", "Robot Garden"],
   titles(sortRecords(books, "minutes")));
 
+// Robot Garden and Quiet Satellites are both 240
+check("sort tie: two 240 minute books go A to Z (EDGE: equal values)",
+  ["Quiet Satellites", "Robot Garden"],
+  titles(sortRecords(books, "minutes")).slice(6));
+
+//New book copies so that tests from before can't change anything
+const freshBooks = JSON.parse(readFileSync("data/books.json", "utf8"));
+sortRecords(freshBooks, "minutes");
+check("sort does not change the original array (NONMUTATION)",
+  ["books-01", "books-02", "books-03", "books-04", "books-05", "books-06", "books-07", "books-08"],
+  ids(freshBooks));
+
 //Summarize
+// Takes: array of records
+// Returns: { count, totalMinutes, averageMinutes, minMinutes, maxMinutes }
 check("summarize all eight books",
   { count: 8, totalMinutes: 1410, averageMinutes: 176.25, minMinutes: 90, maxMinutes: 240 },
   summarizeRecords(books));
@@ -102,6 +126,8 @@ check('summarize skips minutes "thirty" (EDGE: wrong type)',
   summarizeRecords(boundary));
  
 //Report
+// Takes: array of records and a search word
+// Returns: { query, matchCount, titles, summary } (search, then sort, then summarize)
 check('report for "ar": search, sort, then summarize',
   {
     query: "ar",
