@@ -84,4 +84,31 @@ check("sort by minutes, shortest first",
    "River Sketches", "Night Orchard", "Quiet Satellites", "Robot Garden"],
   titles(sortRecords(books, "minutes")));
 
-  
+//Summarize
+check("summarize all eight books",
+  { count: 8, totalMinutes: 1410, averageMinutes: 176.25, minMinutes: 90, maxMinutes: 240 },
+  summarizeRecords(books));
+ 
+check("summarize an empty array (EDGE: empty array)",
+  { count: 0, totalMinutes: 0, averageMinutes: null, minMinutes: null, maxMinutes: null },
+  summarizeRecords(empty));
+
+check("summarize empty: average is null, not NaN (EDGE: empty array)",
+  true,
+  summarizeRecords(empty).averageMinutes === null);
+
+check('summarize skips minutes "thirty" (EDGE: wrong type)',
+  { count: 3, totalMinutes: 270, averageMinutes: 135, minMinutes: 30, maxMinutes: 240 },
+  summarizeRecords(boundary));
+ 
+//Report
+check('report for "ar": search, sort, then summarize',
+  {
+    query: "ar",
+    matchCount: 4,
+    titles: ["Trail Notes", "River Sketches", "Night Orchard", "Robot Garden"],
+    summary: { count: 4, totalMinutes: 750, averageMinutes: 187.5, minMinutes: 120, maxMinutes: 240 },
+  },
+  buildReport(books, "ar"));
+ 
+console.log(`\n${passed} passed, ${failed} failed`);
