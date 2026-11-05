@@ -42,3 +42,35 @@ export function normalizeRecord(record) {
   return copy;
 }
 
+//Filter
+export function filterRecords(records, condition) {
+  return records.filter(condition);
+}
+ 
+//Search
+export function searchRecords(records, query) {
+  const word = query.toLowerCase();
+ 
+  return records.filter((record) => {
+    const title = (record.title || "").toLowerCase();
+    const creator = (record.creator || "").toLowerCase();
+    return title.includes(word) || creator.includes(word);
+  });
+}
+ 
+//Sort
+export function sortRecords(records, property) {
+  const copy = [...records];
+ 
+  copy.sort((a, b) => {
+    if (a[property] < b[property]) {
+      return -1;
+    }
+    if (a[property] > b[property]) {
+      return 1;
+    }
+    return a.title.localeCompare(b.title);
+  });
+ 
+  return copy;
+}

@@ -53,3 +53,30 @@ check("normalize does not change the original record (NONMUTATION)",
   originalRecord,
   JSON.stringify(boundary[2]));
 
+//Filter
+check("filter keeps only the Art books",
+  ["River Sketches", "Paper Worlds"],
+  titles(filterRecords(books, (book) => book.category === "Art")));
+ 
+check("filter on an empty array gives an empty array (EDGE: empty array)",
+  [],
+  filterRecords(empty, (book) => book.category === "Art"));
+ 
+//Search
+check('search ignores capital letters: "robot", "Robot", "ROBOT" (EDGE: capitalization)',
+  [["Robot Garden"], ["Robot Garden"], ["Robot Garden"]],
+  [
+    titles(searchRecords(books, "robot")),
+    titles(searchRecords(books, "Robot")),
+    titles(searchRecords(books, "ROBOT")),
+  ]);
+ 
+check('search looks at the creator: "mina" finds Robot Garden',
+  ["Robot Garden"],
+  titles(searchRecords(books, "mina")));
+ 
+//Sort
+check("sort by minutes, shortest first",
+  ["Cloud Atlas Practice", "Trail Notes", "Small City Stories", "Paper Worlds",
+   "River Sketches", "Night Orchard", "Quiet Satellites", "Robot Garden"],
+  titles(sortRecords(books, "minutes")));
